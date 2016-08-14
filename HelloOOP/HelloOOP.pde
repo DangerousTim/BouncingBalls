@@ -8,7 +8,7 @@ Ball[] ball = new Ball[numballs];
 PVector dist;
 
 void setup() {
-  size(50, 200);
+  size(500, 500);
   for (int i = 0; i < numballs; i++) {
     ball[i] = new Ball(new PVector(random(width), random(height-30)), 
       new PVector(random(-4, 4), random(-4, 4)), .8, 10, 
@@ -44,7 +44,7 @@ boolean collide(Ball b1, Ball b2) {
   } else return false;
 }
 
-//simple 10th grade physics
+//simple 10th grade physics: When 2 similar balls collide, exchange their velocities...
 void exchangevel(Ball b1, Ball b2) {
   PVector tempv;
   tempv = b1.vel;
